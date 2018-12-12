@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="log_path" value="/home/oa/log/" /> 
+	<appender name="rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}main.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}main.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="coreFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}core.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}core.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="mailFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}mail.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}mail.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="crmFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}crm.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}crm.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="skydriveFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}skydrive.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}skydrive.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="sqlFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}sql.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}sql.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="weixinFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log_path}weixin.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_path}weixin.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- project default level -->
+	<logger name="close.gxph.core" level="INFO" additivity="false">
+		<appender-ref ref="coreFile" />
+	</logger>
+	<!-- mail  level -->
+	<logger name="close.gxph.mail" level="INFO" additivity="false">
+		<appender-ref ref="mailFile" />
+	</logger>
+		<!-- bunny  level -->
+	<logger name="close.gxph.bunny" level="INFO" additivity="false">
+		<appender-ref ref="bunnyFile" />
+	</logger>
+	<!-- skydrive level -->
+	<logger name="close.gxph.skydrive" level="INFO" additivity="false">
+		<appender-ref ref="skydriveFile" />
+	</logger>
+	<!-- weixin level -->
+	<logger name="close.gxph.weixin" level="INFO" additivity="false">
+		<appender-ref ref="weixinFile" />
+	</logger>
+	<!--log4jdbc -->
+	<logger name="jdbc.sqltiming" level="INFO" additivity="false">
+		<appender-ref ref="sqlFile" />
+	</logger>
+	<root level="ERROR">
+		<appender-ref ref="rollingFile" />
+	</root>
+</configuration>

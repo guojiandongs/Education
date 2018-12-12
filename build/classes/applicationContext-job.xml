@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd"
+	default-lazy-init="true">
+	<description> 使用Spring的 Scheduled的定时任务配置 </description>
+	<task:scheduler id="springScheduler" pool-size="4" />
+	<task:scheduled-tasks scheduler="springScheduler">
+		<task:scheduled ref="orderspoolService" method="updateOrderStep"
+			cron="0 0 0 * * ? *" />
+		<!-- 微信测试环境任务 -->
+		<!-- <task:scheduled ref="wxAccessTokenService" method="updateAccessToken" -->
+		<!-- cron="0/10 * * * * ?" /> -->
+		<!-- <task:scheduled ref="wxSynOrgService" method="synOrg" -->
+		<!-- cron="0/10 * * * * ?" /> -->
+		<!-- <task:scheduled ref="wxSynOrgService" method="synUserInfoFromWx" -->
+		<!-- cron="0/10 * * * * ?" /> -->
+		<!-- <task:scheduled ref="wxMailRemindService" method="sendMailRemindToWx" -->
+		<!-- cron="0 */1 * * * ?" /> -->
+	</task:scheduled-tasks>
+</beans>

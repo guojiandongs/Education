@@ -1,0 +1,546 @@
+/*登录页开始*/
+html,body,h1,h2.h3,h4,h5,h6,form,ul,li,dl,dd,dt{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+   text-decoration: none;
+}
+.topNav {
+    background: #4b4b4b;
+    height: 28px;
+    line-height:5px;
+    color: #d9d9d9;
+}
+.topNav_wrap {
+    font-size: 12px;
+}
+.topNav_wrap {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+.topNav_l {
+    float: left;
+}
+.topNav_r {
+    float: right;
+}
+.topNav_l a {
+    color: #fff;
+    margin: 0px 10px;
+}
+.topNav_r a {
+    color: #d9d9d9;
+    margin: 0 10px;
+}
+.top {
+    background: #fafafa;
+    height: 73px;
+    border-bottom: 1px solid #ebebeb;
+}
+.top_wrap {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+.fx_phone {
+    float: right;
+    margin-top: 15px;
+}
+.fx_logo {
+    margin-top: 12px;
+    display: block;
+}
+.fx_phone dl {
+    color: #666;
+    width: 420px;
+    height: 20px;
+    overflow: hidden;
+}
+.fx_phone dl dt, .fx_phone dl dd {
+    float: left;
+    font-size: 12px;
+    font-family: "Microsoft Yahei";
+    line-height: 20px;
+}
+.fx_phone dd {
+    margin-left: 10px;
+    color: #999;
+}
+.fx_phone dd span {
+    height: 20px;
+    display: inline-block;
+}
+.fx_phone dd span b {
+    font: bold 14px/20px arial;
+    color: #2a79c8;
+    padding-right: 10px;
+}
+.fx_phone dd em {
+    padding-left: 10px;
+}
+/*center开始*/
+.fx_login_bg {
+    width: 100%;
+    height: 420px;
+    background: url(../../images/loginBgR_N.jpg) no-repeat center;
+    padding: 0;
+    margin: 0;
+}
+.lv_wrap {
+    overflow: hidden;
+    width: 1000px;
+    background: url(../../images/loginbg.jpg) no-repeat;
+    height: 420px;
+    margin: 0 auto;
+}
+.lv_right {
+    background-color: #fff;
+    box-shadow: 0 3px 11px #aaa;
+    float: right;
+    width: 300px;
+    margin: 30px 30px 0 0;
+}
+.fx-lgoin-box {
+    font: 12px/12px "宋体";
+    margin: 30px auto;
+    width: 242px;
+}
+input {
+    border: none;
+}
+button, input {
+    line-height: normal;
+    overflow: visible;
+}
+button, input, select, textarea {
+    font-family: Tahoma,Arial,\5b8b\4f53;
+    margin: 0;
+}
+.lv_right .login-fx-item h2 {
+    line-height: 30px;
+}
+.clearfix h2 {
+    display: block;
+    font-family: Microsoft Yahei;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.field-login {
+    margin-top: 20px;
+}
+.fx-lgoin-box .field-news {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    height: 28px;
+    margin-top: 20px;
+    position: relative;
+}
+.fx-lgoin-box .field-vercode {
+    margin-bottom: 10px;
+}
+#msgSpan {
+    color: red;
+    display: block;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.fx-lgoin-box .fx-login-btn, .fx-login-nopoint {
+    background: url("../../images/lv_fx_login_icon.png") no-repeat;
+    border: 0 none;
+    color: #fff;
+    display: inline-block;
+    font: bold 14px/30px '宋体';
+    height: 30px;
+    letter-spacing: 15px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+    width: 242px;
+}
+.fx-lgoin-box .warm_tip {
+    margin-top: 20px;
+    text-align: right;
+}
+.fx-lgoin-box .field-login .usermame-field i {
+    background-position: -129px -90px;
+}
+.fx-lgoin-box .field-login i {
+    background: url("../../images/lv_fx_login_icon.png") no-repeat;
+    float: left;
+    height: 11px;
+    margin: 9px 10px 0;
+    width: 11px;
+    display: inline-block;
+}
+.fx-lgoin-box .field-news input, .fx-lgoin-box .field-news input.textbox {
+    border-left: 1px solid #ccc;
+    color: #666;
+    float: left;
+    font: bold 14px/18px Tahoma;
+    height: 18px;
+    margin-top: 5px;
+    padding: 0 10px;
+    width: 182px;
+    outline: none;
+}
+.lv_right .fx-lgoin-box .password-field {
+    float: left;
+}
+.fx-lgoin-box .field-news {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    height: 28px;
+    margin-top: 20px;
+    position: relative;
+}
+.fx-lgoin-box .field-login .password-field i{
+    background-position: -129px -101px;
+    display: block;
+}
+.fx-lgoin-box .field-login i {
+    background: url("../../images/lv_fx_login_icon.png") no-repeat;
+    float: left;
+    height: 11px;
+    margin: 9px 10px 0;
+    width: 11px;
+    display: inline-block;
+}
+.lv_right .fx-lgoin-box .field-news .textbox_password {
+    width: 120px;
+}
+.fx-lgoin-box .field-news input, .fx-lgoin-box .field-news input.textbox {
+    border-left: 1px solid #ccc;
+    color: #666;
+    float: left;
+    font: bold 14px/18px Tahoma;
+    height: 18px;
+    margin-top: 5px;
+    padding: 0 10px;
+    width:182px;
+    outline: none;
+}
+.new-forpwd {
+    color: #0069ca;
+    float: right;
+    margin-top: 30px;
+}
+.fx-lgoin-box .field-vercode {
+    margin-bottom: 10px;
+}
+.fx-lgoin-box .field-vercode .field-news {
+    float: left;
+    width: 105px;
+}
+.fx-lgoin-box .field-news {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    height: 28px;
+    margin-top: 20px;
+    position: relative;
+}
+.fx-lgoin-box .field-vercode .field-news input {
+    border-left: 0 none;
+    left: 0;
+    position: absolute;
+    width: 85px;
+    z-index: 1;
+    padding: 0 5px;
+}
+.fx-lgoin-box .field-vercode p {
+    float: left;
+    margin: 20px 0 0 5px;
+    width: 85px;
+    height: 29px;
+}
+.fx-lgoin-box .field-vercode a.nogo {
+    color: #0069ca;
+}
+.fx-lgoin-box .field-vercode a {
+    line-height: 30px;
+    float: right;
+    margin-top: 20px;
+}
+#msgSpan {
+    color: red;
+    display: block;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.fx-lgoin-box .fx-login-btn, .fx-login-nopoint {
+    background: url("../../images/lv_fx_login_icon.png") no-repeat;
+    border: 0 none;
+    color: #fff;
+    display: inline-block;
+    font: bold 14px/30px '宋体';
+    height: 30px;
+    letter-spacing: 15px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+    width: 242px;
+}
+.fx-lgoin-box .warm_tip {
+    margin-top: 20px;
+    text-align: right;
+}
+.fx-lgoin-box .lv_zc {
+    color: #0069ca;
+}
+/*center结束*/
+/*footer开始*/
+.footer {
+    font-size: 12px;
+    font-family: "Microsoft Yahei";
+}
+.footer {
+    background: #f8f8f8;
+    padding: 15px 0 20px;
+    border-top: 1px solid #eaeaea;
+    clear: both;
+}
+.footer p {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: #888;
+    line-height: 24px;
+}
+.footer p a {
+    color: #888;
+    padding: 0px 5px;
+}
+.form-group {
+    margin: 0 0 15px 0;
+}
+.checkbox-inline,.radio-inline {
+    padding-top: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+input[type=radio] {
+    width: 18px;
+    height: 18px;
+    border:1px solid #ccc;
+    margin: 4px 0 0;
+    line-height:normal;
+
+}
+
+/*footer结束*/
+/*登录页结束*/
+/*注册页开始*/
+.index {
+    width: 820px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+    padding: 60px 0 140px;
+}
+.login_company {
+    float: left;
+    width: 389px;
+    background: url(../../images/fx_login_bg.png) no-repeat 0 -30px;
+    border-radius:10px;
+}
+.login_person {
+    float: right;
+    width: 389px;
+    background: url(../../images/fx_login_bg.png) no-repeat -388px -30px;
+    border-radius:10px;
+}
+.login_company_main, .login_person_main {
+    padding: 92px 0 20px 40px;
+    border: 1px solid #ebebeb;
+    border-top: none 0;
+    color: #666666;
+    font-size: 14px;
+}
+.login_company_main dt, .login_person_main dt {
+    margin-bottom: 20px;
+}
+.login_company_main dd, .login_person_main dd {
+    color: #999999;
+    margin-bottom: 20px;
+    background: url(../../images/fx_login_bg.png) no-repeat -756px 3px;
+}
+.login_company_main dd span, .login_person_main dd span {
+    padding: 0px 13px 0 10px;
+    font-family: Arial;
+    color: #fff;
+    font-weight: 700;
+    line-height:20px;
+}
+.login_company_main a {
+    display: block;
+    margin: 15px 0 0 30px;
+    background: url(../../images/fx_login_bg.png) no-repeat 0 0;
+    width: 185px;
+    height: 30px;
+}
+.login_person {
+    float: right;
+    width: 389px;
+    background: url(../../images/fx_login_bg.png) no-repeat -388px -30px;
+}
+.login_person_main a {
+    display: block;
+    margin: 15px 0 0 30px;
+    background: url(../../images/fx_login_bg.png) no-repeat -184px 0;
+    width: 230px;
+    height: 30px;
+}
+/*注册页结束*/
+/*注册内容页开始*/
+.step_table {
+    table-layout: fixed;
+    width: 600px;
+    margin-bottom: 20px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.step_table .complete {
+    color: #689e3d;
+    font-weight: bold;
+}
+.step_table .complete .hot {
+    border-top-color: #78b448;
+}
+td{
+    width:200px;
+}
+.step_table div {
+    border-top: 6px solid #d7d7d7;
+    margin-bottom: 10px;
+    position: relative;
+    zoom: 1;
+}
+.step_table .complete i {
+    width: 10px;
+    height: 10px;
+    background-position: 0 0;
+    margin: -12px 0 0 -9px;
+    display: inline-block;
+    overflow: hidden;
+    border: 4px solid #78b448;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+.nRBox {
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 20px;
+}
+.nRBox h3 {
+    height: 35px;
+    border-bottom: 1px solid #d7d7d7;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+.formBox {
+    height: auto;
+    margin: 20px 0;
+}
+ol, ul {
+    list-style-type: none;
+}
+.formBox li {
+    margin: 15px 0;
+}
+.titleBox {
+    display: inline-block;
+    float: left;
+    width: 220px;
+    height: 26px;
+    line-height: 26px;
+    color: #333333;
+    text-align: right;
+}
+.titleBox em {
+    color: #ff0000;
+    margin-right: 5px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.login_form .textClass {
+    width: 185px;
+    height: 24px;
+    float: left;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border: 1px solid #bebebe;
+}
+.nRBox .tiptext {
+    padding: 0 5px;
+}
+.nRBox .tipsxx {
+    display: inline-block;
+    color: #999999;
+}
+.form-small .tip-line {
+    height: 24px;
+    line-height: 22px;
+}
+.form-inline .tip-line {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+button, input, select, textarea {
+    font-family: Tahoma,Arial,\5b8b\4f53;
+    margin: 0;
+}
+button, input {
+    line-height: normal;
+    overflow: visible;
+}
+input {
+    padding: 1px;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    height:24px;
+}
+textarea, keygen, select, button {
+    margin: 0em;
+    font: normal normal normal normal 13.3333330154419px/normal Arial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+.btn{
+    width:80px;
+    height:30px;
+    text-align: center;
+}
+
+
+/*注册内容页结束*/
